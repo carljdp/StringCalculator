@@ -17,7 +17,11 @@ namespace StringCalculator
         {
             var number = 0;
 
+            int.TryParse(rawString, out number);
+
             return number;
         }
     }
 }
+
+
