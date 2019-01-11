@@ -17,17 +17,17 @@ namespace StringCalculator
     {
         public static int Add(string rawString)
         {
-            var stringArray = rawString.Split(',');
+            var strings = rawString.Split(',');
 
-            var intArray = stringArray
-                .Select((i) =>
+            var numbers = strings
+                .Select((element) =>
                 {
-                    int.TryParse(i,out int number);
+                    int.TryParse(element,out var number);
                     return number;
                 })
                 .ToArray<int>();
 
-            return intArray.Sum();
+            return numbers.Sum();
         }
     }
 }
