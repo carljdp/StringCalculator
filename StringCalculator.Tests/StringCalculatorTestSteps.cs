@@ -16,13 +16,24 @@ namespace StringCalculator.Tests
         }
 
         [TestMethod]
-        public void Step02_SingleNumber_ResturnsThatNumber()
+        public void Step02_Add_SingleNumber_ResturnsThatNumber()
         {
             var actual1 = Calculator.Add("1");
             var actual2 = Calculator.Add("3");
 
             Assert.AreEqual(1, actual1);
             Assert.AreEqual(3, actual2);
+
+        }
+
+        [TestMethod]
+        public void Step03_Add_TakesTwoNumbers_ReturnsTheSum()
+        {
+            var actual1 = Calculator.Add("1,2");
+            var actual2 = Calculator.Add("3,5");
+
+            Assert.AreEqual(3, actual1);
+            Assert.AreEqual(8, actual2);
 
         }
     }

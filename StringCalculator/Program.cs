@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel;
+using System.Linq;
 
 namespace StringCalculator
 {
@@ -15,13 +17,17 @@ namespace StringCalculator
     {
         public static int Add(string rawString)
         {
-            var number = 0;
+            var stringArray = rawString.Split(',');
 
-            int.TryParse(rawString, out number);
+            var intArray = stringArray
+                .Select((i) =>
+                {
+                    int.TryParse(i,out int number);
+                    return number;
+                })
+                .ToArray<int>();
 
-            return number;
+            return intArray.Sum();
         }
     }
 }
-
-
