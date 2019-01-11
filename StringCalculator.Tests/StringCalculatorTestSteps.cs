@@ -1,4 +1,5 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using StringCalculator;
 
 namespace StringCalculator.Tests
 {
@@ -8,11 +9,9 @@ namespace StringCalculator.Tests
         [TestMethod]
         public void Step01_Add_TakesAString_ReturnsANumber()
         {
+            var actual = Calculator.Add("");
 
-            var result = StringCalculator.Add("")
-
-            Assert.AreEqual(x,x)
-
+            Assert.AreEqual(0, actual);
         }
     }
 }
