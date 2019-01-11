@@ -15,11 +15,9 @@ namespace StringCalculator
     {
         public static int Add(string rawString)
         {
-            int result=-1;
+            var number = 0;
 
-            int.TryParse(rawString, out result);
-
-            return result;
+            return number;
         }
     }
 }

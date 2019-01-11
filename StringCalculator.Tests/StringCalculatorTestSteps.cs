@@ -12,6 +12,7 @@ namespace StringCalculator.Tests
             var actual = Calculator.Add("");
 
             Assert.AreEqual(0, actual);
+
         }
     }
 }
